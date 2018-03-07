@@ -1,0 +1,69 @@
+remote repositories: github, gitlab, beanstalk
+https://www.youtube.com/channel/UCK_DAaLso6GNsOKyL2funLw/playlists
+
+# set config
+git config --global user.email
+git config --global user.name
+
+# create git repository in a directory
+git init
+
+# get info from dir
+git status
+
+# create a file
+touch test.txt
+
+# add the file to staging area
+git add test.txt
+git add '*.txt'
+git add .
+
+# remove the file from staging area
+git reset test.txt
+
+# delete changes from file, set original file
+git checkout -- test.txt
+
+# add the file to repo (minél többször kell commit-olni)
+git commit -m "szoveges uzenet a modositasrol"
+
+# get info from commits
+git log
+
+# add remote git server (origin is an alias from repo)
+git remote add origin <link>
+
+# push local repo to remote (ha megadom a '-u' parametert, akkor legközelebb elég a 'git push' parancs)
+git push -u origin master
+
+(ha elobb a lokalis, utana a szerver oldali keszul el, akkor a pull request nem mukodik, helyette:
+git pull origin master --allow-unrelated-histories)
+
+# pull remote repo to local
+git pull origin master
+
+# create a locale repo from remote server
+git clone <link>
+
+# get differencial from preview commit
+git diff HEAD
+
+# get differencial on staged files
+git diff --staged
+
+# create a branch
+git branch clean_up
+
+# change branch
+git checkout cleen_up
+
+# remove txt files
+git rm '*.txt'
+git commit -m "Remove all txt"
+
+# merge the clean_up branch to master
+git merge clean_up
+
+# delete branch
+git branch -d clean_up
