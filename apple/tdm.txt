@@ -1,0 +1,3 @@
+TDM allows Apple computers with OpenBoot firmware or newer firmware to boot into a state where the Mac system appears as an external disk enclo-
+sure and the internal disks are available as SCSI target devices. Earlier TDM implementations used the FireWire bus but have since moved to Thunder-
+bolt. You activate this mode by holding down the T key while powering on the Apple computer.
